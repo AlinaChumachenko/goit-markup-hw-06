@@ -892,6 +892,8 @@ footer {
 
 .check-text a {
     color: var(--accent-color);
+    transition: text-decoration 250ms var(--time-variable);
+
 }
 
 .check-text a:hover {
