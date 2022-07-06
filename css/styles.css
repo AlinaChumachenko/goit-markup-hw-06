@@ -662,13 +662,11 @@ footer {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     background-color: transparent;
     outline: transparent;
-    transition: background-color 250ms var(--time-variable),
-    border 250ms var(--time-variable),
+    transition: border 250ms var(--time-variable),
     box-shadow 250ms var(--time-variable);
 }
 
 .subscription-input:focus {
-    background-color: var(--hero-text-color);
     border: 1px Solid var(--accent-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
@@ -688,7 +686,11 @@ footer {
     line-height: 1.25;
     letter-spacing: 0.03;
     cursor: pointer;
-    
+    transition: color 250ms var(--time-variable),
+}
+
+.subscription-input:focus::placeholder {
+    color: var(--hero-text-color);
 }
 
 .button-icon-subscribe {
@@ -858,10 +860,10 @@ footer {
     content: '';
     width: 16px;
     height: 15px;
-    border: 1px Solid #000000;
+    border: 2px Solid #000000;
     border-radius: 2px;
     margin-right: 8px;
-    transition: background-color 250ms var(--time-variable),
+    transition: border-color 250ms var(--time-variable),
     box-shadow 250ms var(--time-variable);
 }
 
@@ -874,8 +876,9 @@ footer {
 }
 
 .input-chek:focus + .check-text::before {
-    border-color : var(--accent-color) ;
+    border-color: var(--accent-color) ;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    
 } 
 
 .check-text {
@@ -889,6 +892,9 @@ footer {
 
 .check-text a {
     color: var(--accent-color);
+}
+
+.check-text a:hover {
     text-decoration: none;
 }
 
